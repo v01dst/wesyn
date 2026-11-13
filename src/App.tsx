@@ -86,7 +86,8 @@ export default function App() {
           : route === '/people' ? <PeopleView client={client} go={go} />
           : route === '/planets' ? <PlanetsView client={client} />
           : route === '/messages' ? <MessagesView client={client} />
-          : <FeedView client={client} />}
+          : route === '/' ? <FeedView client={client} />
+          : <p className="err" role="alert">No such page. <a href="#/">Back to the feed</a></p>}
       </main>
       <footer className="foot">
         Open source (AGPL-3.0) · <a href="https://github.com/Aitherium/wesyn">github.com/Aitherium/wesyn</a> · Join from Discord with <code>/wesyn join</code>
